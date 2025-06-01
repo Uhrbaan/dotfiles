@@ -1,0 +1,89 @@
+# Mostly copied from DreamsOfCode's configuration.
+# From: <https://github.com/dreamsofcode-io/dotfiles/blob/main/.config/ohmyposh/zen.toml> 
+
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'magenta'
+  background = 'transparent'
+  
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground = 'magenta'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+  
+#  [[blocks.segments]]
+#    type = 'session'
+#    template = '<b>{{ .UserName }}@{{ .HostName }}</b> '
+#    foreground = 'green'
+#    background = 'transparent'
+#    style = 'plain'
+
+  [[blocks.segments]]
+    type = 'python'
+    foreground = 'white'
+    background = 'transparent'
+    template = '{{ if .Venv }}({{ .Venv }}) {{ end }}'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '<b>{{ .Path }}</b>'
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'full'
+
+  [[blocks.segments]]
+    template = ' <b>{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</b>'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      cache_duration = 'none'
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    template = '{{ .FormattedMs }}'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      threshold = 1000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '<bold>❯</bold>'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground = 'magenta'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
