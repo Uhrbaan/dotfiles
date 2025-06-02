@@ -7,3 +7,4 @@ export PATH="$PATH:/home/luclement/.local/bin"
 
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/home/luclement/snap/code/191/.local/share/flatpak/exports/share"
 export PATH="$PATH:/home/luclement/.local/bin/"
+export XDG_CONFIG_HOME="/home/luclement/.config"
