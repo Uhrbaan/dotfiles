@@ -6,7 +6,10 @@ setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
-HISTFILE=/home/luclement/.cache/zsh/history
+HISTFILE="$HOME/.cache/zsh/history"
+
+# set vim-like key bindings for zsh
+bindkey -v
 
 # load default bash_profile which has a lot of PATH variables.
 if [ -f ~/.bash_profile ]; then

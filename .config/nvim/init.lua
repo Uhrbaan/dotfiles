@@ -25,6 +25,7 @@ vim.opt.showmatch = true -- When a bracket is inserted, briefly jump to the matc
 vim.opt.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smagic, :snomagic and user commands with the :command-preview flag as you type.
 vim.opt.splitright = true
 vim.opt.splitbelow = true -- When on, splitting a window will put the new window below the current one
+vim.opt.wrap = false -- When true (default) enables word wrapping
 
 -- map the <Space> as the leader key
 vim.g.mapleader = " "
