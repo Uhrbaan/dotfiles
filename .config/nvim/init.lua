@@ -30,3 +30,6 @@ vim.opt.wrap = false -- When true (default) enables word wrapping
 -- map the <Space> as the leader key
 vim.g.mapleader = " "
 
+-- diagnostics
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)

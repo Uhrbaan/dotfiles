@@ -8,3 +8,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/snap/code/191/.local/share/flatpak/exports/share"
 export PATH="$PATH:$HOME/.local/bin/"
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# for typst
+export export TYPST_FONT_PATHS="$HOME/.local/share/fonts"
+. "$HOME/.cargo/env"
