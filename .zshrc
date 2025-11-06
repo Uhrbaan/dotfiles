@@ -33,8 +33,13 @@ alias ll='ls -l --human-readable'
 alias lll='ll -a'
 alias vim='nvim'
 alias rm='rm -i'
+alias bat='batcat --theme="Catppuccin Mocha"'
 alias trash='gio trash'
 alias folder='nautilus .'
+
+# colorful help messages
+# alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+# alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # Manage dotfiles with git
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

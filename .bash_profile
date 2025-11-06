@@ -12,3 +12,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # for typst
 export export TYPST_FONT_PATHS="$HOME/.local/share/fonts"
 . "$HOME/.cargo/env"
+
+# For VM
+export LIBVIRT_DEFAULT_URI="qemu:///system"
